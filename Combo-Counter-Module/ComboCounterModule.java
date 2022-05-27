@@ -5,9 +5,9 @@ import com.streamlined.client.event.SubscribeEvent;
 import com.streamlined.client.event.impl.SCAttackEntityEvent;
 import com.streamlined.client.event.impl.SCDamageEntityEvent;
 import com.streamlined.client.event.impl.SCpdateEvent;
-import com.streamlined.client.features.modules.utils.DefaultModuleRenderer;
+import com.streamlined.client.features.modules.utils.SCDefaultRenderModule;
 
-public class ComboCounterModule extends DefaultModuleRenderer {
+public class ComboCounterModule extends SCDefaultRenderModule {
 
 	private long hitTime = -1;
 	private int combo;
@@ -28,7 +28,7 @@ public class ComboCounterModule extends DefaultModuleRenderer {
 	}
 	
 	@Override
-	public Object getDummy() {
+	public Object getDummyValue() {
 		return "6 hits";
 	}
 	
